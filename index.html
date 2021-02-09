@@ -12,6 +12,10 @@
 <body>
     <div class="container">
         <h1>Playing with Maps</h1>
+        <div class="mapMode">
+            <button class = "btn_map active" value="states">By States</button>
+            <button class = "btn_map" value="counties">By Counties</button>
+        </div>
         <svg></svg>
     </div>
     <div id="map-tooltip">
@@ -19,6 +23,17 @@
         <div class="population"></div>
         <div class="medage"></div>
     </div>
-    <script src="script-4.tooltip.js"></script>
+    <script src="script.js"></script>
+    <script>
+        //click events
+        let mapBtn = document.querySelectorAll(".btn_map");
+        console.log(mapBtn);
+        mapBtn.forEach(btn => btn.addEventListener("click", function(e){
+            let current = document.querySelector(".active");
+            current.classList.remove('active');
+            this.classList.add('active');
+        }));
+
+    </script>
 </body>
 </html>

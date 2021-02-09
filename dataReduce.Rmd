@@ -1,0 +1,30 @@
+---
+title: "MortDataReduce"
+author: "Tingsong Ou"
+date: "1/31/2021"
+output: html_document
+---
+
+```{r setup}
+library(tidyverse);
+
+```
+
+
+```{r reduce}
+data <- read_csv('data/covid_us_county.csv');
+stateData <- data %>% filter(long != 0.00) %>% 
+  group_by(state = state) %>% 
+  summarise(long = mean(long),
+            lat = mean(lat),
+            total = sum(cases),
+            death = sum(deaths));
+
+countyData <- data %>% select(1:5, 7, 9) %>%
+  filter(long != 0.00);
+
+write.csv(stateData, 'data/stateData.csv');
+write.csv(countyData, 'data/countyData.csv');
+"write.csv(mortData,'data/MortData_reduced.csv');"
+```
+
