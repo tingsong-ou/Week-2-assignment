@@ -11,10 +11,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Playing with Maps</h1>
+        <h1>COVID-19 Caese and Deaths in U.S.</h1>
         <div class="mapMode">
-            <button class = "btn_map active" value="states">By States</button>
+            <label for = "btn_map">Please Select A Map Type:</label>
+            <button class = "btn_map activeBlue" value="states">By States</button>
             <button class = "btn_map" value="counties">By Counties</button>
+        </div>
+        <div class="dataType">
+            <label for = "btn_type">Please Select A Data Type:</label>
+            <button class = "btn_type activeRed" value="cases">Cases</button>
+            <button class = "btn_type" value="deaths">Deaths</button>
         </div>
         <svg></svg>
     </div>
@@ -27,11 +33,18 @@
     <script>
         //click events
         let mapBtn = document.querySelectorAll(".btn_map");
-        console.log(mapBtn);
+        let typeBtn = document.querySelectorAll(".btn_type");
+
         mapBtn.forEach(btn => btn.addEventListener("click", function(e){
-            let current = document.querySelector(".active");
-            current.classList.remove('active');
-            this.classList.add('active');
+            let current = document.querySelector(".activeBlue");
+            current.classList.remove('activeBlue');
+            this.classList.add('activeBlue');
+        }));
+        
+        typeBtn.forEach(btn => btn.addEventListener("click", function(e){
+            let current = document.querySelector(".activeRed");
+            current.classList.remove('activeRed');
+            this.classList.add('activeRed');
         }));
 
     </script>

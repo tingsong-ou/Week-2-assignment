@@ -12,16 +12,17 @@ library(tidyverse);
 
 
 ```{r reduce}
-data <- read_csv('data/covid_us_county.csv');
-stateData <- data %>% filter(long != 0.00) %>% 
+data <- read_csv('data/covid_data.csv');
+stateData <- data %>% filter(long != 'NA') %>% 
+  filter(long < 0) %>%
   group_by(state = state) %>% 
   summarise(long = mean(long),
             lat = mean(lat),
-            total = sum(cases),
+            cases = sum(cases),
             death = sum(deaths));
 
-countyData <- data %>% select(1:5, 7, 9) %>%
-  filter(long != 0.00);
+countyData <- data %>% select(2:3, 5:8) %>%
+  filter(long != 'NA') %>% filter(long < 0);
 
 write.csv(stateData, 'data/stateData.csv');
 write.csv(countyData, 'data/countyData.csv');
