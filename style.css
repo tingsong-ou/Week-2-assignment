@@ -5,21 +5,14 @@ html, button{
 h1{
     font-size: 32px;
     font-weight: 500;
+    margin-bottom: 0px;
 }
 
-.container {
-    width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-g.map > path {
-    fill: none;
-    stroke: #ccc;
-}
-
-g.bubbles > circle {
-    fill: rgba(30, 80, 100, 0.8);
+h2{
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 button, label{
@@ -30,6 +23,29 @@ button, label{
     padding-right: 5px;
     outline:none;
     border:none;
+}
+
+svg{
+    margin-top: 12px;
+    border: dashed 100px;
+    border-width: 2px;
+    border-color: rgb(230, 230, 230);
+}
+
+.container {
+    width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+g.map > path {
+    fill:none;
+    stroke: rgb(180, 180, 180);
+    
+}
+
+g.bubbles > circle {
+    fill: rgba(30, 80, 100, 0.8);
 }
 
 .btn_type{
@@ -44,4 +60,16 @@ button, label{
 .activeRed, .btn_type:hover{
     background-color: rgb(230, 153, 109);
     color:rgb(255, 255, 255);
+}
+
+.tooltip{
+    position:absolute;
+    visibility: hidden;
+    text-align: left;
+    font-size: 16px;
+    padding: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 3%;
+    background-color: rgba(255, 255, 255, 0.7);
 }

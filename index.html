@@ -7,15 +7,16 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.5.0/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-hexbin/0.2.2/d3-hexbin.min.js" integrity="sha512-UdiUWVPl/Llj9EsBhtsgPBWwvCJr8S8/DKQzIqh6qLAfqiziqzJBcVl3xPRJChhKCBlFwOEIbyR18af9rVaAZw==" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>COVID-19 Caese and Deaths in U.S.</h1>
+        <h2>Data: Feb.7, 2021</h2>
         <div class="mapMode">
             <label for = "btn_map">Please Select A Map Type:</label>
-            <button class = "btn_map activeBlue" value="states">By States</button>
-            <button class = "btn_map" value="counties">By Counties</button>
+            <button class = "btn_map" value="states">By States</button>
+            <button class = "btn_map activeBlue" value="counties">By Counties</button>
         </div>
         <div class="dataType">
             <label for = "btn_type">Please Select A Data Type:</label>

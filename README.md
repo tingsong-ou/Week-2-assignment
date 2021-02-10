@@ -1,4 +1,9 @@
-# Week-1-assignment
+# Tingsong Ou - Week2 Assignment Submission
+
+Assignment GitHub Pages Link: https://tingsong-ou.github.io/Week-2-assignment/
+
+
+--------------Following Are Assignment Requirements---------
 
 ## Coding assignment
 Use this repository as your starter files.
